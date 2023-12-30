@@ -51,12 +51,7 @@ app.get('/getQrCode', (req: Request, res: Response) => {
 
     },
     undefined,
-    { 
-      logQR: true,
-      puppeteer: {
-        launchOptions: {
-          timeout: 60000, // Tempo limite em milissegundos (aumente conforme necessário)
-        },}}
+    { logQR: true }
   )
   .then((client: any) => {
     clientVenom = client
